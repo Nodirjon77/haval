@@ -672,31 +672,161 @@ body.popup-open {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-  .hero__title {
-    font-size: 26px;
+
+  /* ===== HEADER ===== */
+  .header__nav {
+    display: none;
   }
 
-  .timer-section__inner {
+  .header__top .container {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .header .container {
-    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
     text-align: center;
   }
 
-  .header__nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .header__nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 20px;
   }
 
+  /* ===== HERO ===== */
+  .hero__title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    top: 5%;
+  }
+
+  .btn-main {
+    font-size: 12px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+  }
+
+  /* ===== TIMER ===== */
+  .timer-section__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .timer-section__text {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .timer__block {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timer__ring {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timer__content span {
+    font-size: 16px;
+  }
+
+  .timer__content small {
+    font-size: 8px;
+  }
+
+  .timer__colon {
+    font-size: 18px;
+  }
+
+  .btn-main__2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== CARS ===== */
   .cars .container {
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
   }
 
+  .car-card {
+    max-width: 100%;
+  }
+
+  /* ===== CAR CARD TOP ===== */
+  .car-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .car-card__title {
+    font-size: 18px;
+  }
+
+  .car-card__benefit {
+    font-size: 14px;
+  }
+
+  .car-card__benefit strong {
+    font-size: 16px;
+  }
+
+  .car-card__slider {
+    height: 180px;
+  }
+
+  .car-card__slider img {
+    height: 180px;
+  }
+
+  /* ===== FEATURES ===== */
   .car-card__features {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* bir ustun */
+  }
+
+  /* ===== BUTTONS ===== */
+  .car-card .btn-main,
+  .car-card .btn-outline,
+  .car-card .btn-dark {
+    font-size: 13px;
+    padding: 12px;
+    letter-spacing: 1px;
+  }
+
+}
+
+/* Kichik telefonlar uchun */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .timer {
+    gap: 4px;
+  }
+
+  .timer__block {
+    width: 52px;
+    height: 52px;
+  }
+
+  .timer__ring {
+    width: 52px;
+    height: 52px;
+  }
+
+  .timer__content span {
+    font-size: 14px;
+  }
+
+  .timer__colon {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 }
