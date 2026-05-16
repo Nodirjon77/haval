@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAVAL — Увеличиваем выгоды</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <!-- Oswald shrifti — Haval ga o'xshash -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&display=swap" rel="stylesheet">
+  <!-- O'z CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <!-- Top bar -->
+    <div class="header__top">
+      <div class="container">
+        <div class="header__logo">
+          <div class="header__logo-text">
+            <span>Официальный дилер</span>
+          <img src="images/logo.png" alt="HAVAL">
+          </div>
+        </div>
+        <div class="header__phone">
+          <span>📱</span>
+          <a href="tel:+70000000000">+0 000 000 00 00</a>
+          </div>
+          <div class="header__address">
+            <svg width="20" height="20" color="white" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          <div>
+            <p> г. Москва<br>
+             Часы работы с 09:00 до 21:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Nav bar -->
+    <nav class="header__nav">
+      <div class="container">
+        <a href="#">M6</a>
+        <a href="#">DARGO X</a>
+        <a href="#">DARGO</a>
+        <a href="#">JOLION</a>
+        <a href="#">F7x</a>
+        <a href="#">F7</a>
+        <a href="#">H9</a>
+        <a href="#">GWM Poer</a>
+        <a href="#">GWM Poer KINGKONG</a>
+        <a href="#" class="nav__highlight">ПОДОБРАТЬ КОМПЛЕКТАЦИЮ</a>
+        <a href="#" class="nav__highlight">ТЕСТ-ДРАЙВ</a>
+        <a href="#" class="nav__highlight">КОНТАКТЫ</a>
+      </div>
+    </nav>
+  </header>
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+        <h1 class="hero__title">
+          Увеличиваем выгоды на HAVAL <br>
+          в Химках к <span>Чёрной пятнице!</span>
+        </h1>
+        <button class="btn-main" onclick="openPopup()">
+          Зафиксировать условия
+        </button>
+        <img src="images/hero-bg.jpg" alt="hero-bg" class="hero__image">
+    </div>
+  </section>
+
+  <!-- ========== TIMER ========== -->
+  <section class="timer-section">
+  <div class="container">
+    <div class="timer-section__inner">
+
+      <!-- CHAP: yozuv + timer -->
+      <div class="timer-section__left">
+        <p class="timer-section__text">ОСТАВЬТЕ ЗАЯВКУ И ЗАФИКСИРУЙТЕ УСЛОВИЯ</p>
+        <div class="timer" id="timer">
+
+          <div class="timer__block">
+            <svg class="timer__ring" viewBox="0 0 80 80">
+              <circle class="timer__ring-bg" cx="40" cy="40" r="34"/>
+              <circle class="timer__ring-progress" id="ring-days" cx="40" cy="40" r="34"/>
+            </svg>
+            <div class="timer__content">
+              <span id="days">00</span>
+              <small>дней</small>
+            </div>
+          </div>
+
+          <span class="timer__colon">:</span>
+
+          <div class="timer__block">
+            <svg class="timer__ring" viewBox="0 0 80 80">
+              <circle class="timer__ring-bg" cx="40" cy="40" r="34"/>
+              <circle class="timer__ring-progress" id="ring-hours" cx="40" cy="40" r="34"/>
+            </svg>
+            <div class="timer__content">
+              <span id="hours">00</span>
+              <small>часов</small>
+            </div>
+          </div>
+
+          <span class="timer__colon">:</span>
+
+          <div class="timer__block">
+            <svg class="timer__ring" viewBox="0 0 80 80">
+              <circle class="timer__ring-bg" cx="40" cy="40" r="34"/>
+              <circle class="timer__ring-progress" id="ring-minutes" cx="40" cy="40" r="34"/>
+            </svg>
+            <div class="timer__content">
+              <span id="minutes">00</span>
+              <small>минут</small>
+            </div>
+          </div>
+
+          <span class="timer__colon">:</span>
+
+          <div class="timer__block">
+            <svg class="timer__ring" viewBox="0 0 80 80">
+              <circle class="timer__ring-bg" cx="40" cy="40" r="34"/>
+              <circle class="timer__ring-progress" id="ring-seconds" cx="40" cy="40" r="34"/>
+            </svg>
+            <div class="timer__content">
+              <span id="seconds">00</span>
+              <small>секунд</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- O'NG: button -->
+      <button class="btn-main__2" onclick="openPopup()">
+        Зафиксировать условия
+      </button>
+
+    </div>
+  </div>
+</section>
+ 
+  <!-- ========== CARS ========== -->
+  <section class="cars">
+    <div class="container">
+
+  <!-- M6 karta -->
+    <div class="car-card">
+      <span class="car-card__badge">В наличии</span>
+        <div class="car-card__top">
+          <div class="car-card__header">
+            <h3 class="car-card__title">HAVAL M6</h3>
+            <a href="#" class="car-card__testdrive">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                        10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+              </svg>
+              Записаться<br>на тест-драйв
+            </a>
+          </div>
+            <p class="car-card__benefit">Выгода до <strong>320 000 ₽</strong></p>
+            <div class="car-card__slider swiper" id="sliderM6">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/haval_m6_white.png" alt="white"></div>
+              <div class="swiper-slide"><img src="images/haval_m6_silver.png" alt="silver"></div>
+              <div class="swiper-slide"><img src="images/haval_m6_black.png" alt="black"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+      </div>
+      <div class="car-card__bottom">
+        <div class="car-card__colors">
+            <span class="color-dot" style="background:#888"      onclick="changeSlide('sliderM6', 1)"></span>
+            <span class="color-dot" style="background:#222"      onclick="changeSlide('sliderM6', 3)"></span>
+            <span class="color-dot" style="background:#fff; border:1px solid #ccc" onclick="changeSlide('sliderM6', 0)"></span>
+        </div>
+
+        <ul class="car-card__features">
+          <li>Выгода по госпрограмме</li>
+          <li>Максимальные выгоды по трейд-ин</li>
+          <li>КАСКО в подарок</li>
+          <li>Зимние шины в подарок</li>
+          <li>Доп.оборудование на 100 000р в подарок</li>
+        </ul>
+
+          <button class="btn-main" onclick="openPopup()">Узнать стоимость</button>
+          <button class="btn-dark" onclick="openPopup()">Подобрать комплектацию</button>
+          <button class="btn-outline" onclick="openPopup()">Рассчитать кредит</button>
+        </div>
+      </div>
+      <!-- DARGO X karta -->
+  <div class="car-card">
+    <span class="car-card__badge">В наличии</span>
+      <div class="car-card__top">
+        <div class="car-card__header">
+          <h3 class="car-card__title">HAVAL DARGO X</h3>
+            <a href="#" class="car-card__testdrive">
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                        10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+              </svg>
+              Записаться<br>на тест-драйв
+            </a>
+        </div> 
+          <p class="car-card__benefit">Выгода до <strong>320 000 ₽</strong></p>
+      <div class="car-card__slider swiper" id="sliderDargo">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/dargp_white.png" alt="white"></div>
+            <div class="swiper-slide"><img src="images/dargo_silver.png" alt="silver"></div>
+            <div class="swiper-slide"><img src="images/dargo-red.png" alt="red"></div>
+            <div class="swiper-slide"><img src="images/dargo_black.png" alt="black"></div>
+          </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="car-card__bottom">
+        <div class="car-card__colors">
+          <span class="color-dot" style="background:#888"      onclick="changeSlide('sliderDargo', 1)"></span>
+          <span class="color-dot" style="background:#222"      onclick="changeSlide('sliderDargo', 3)"></span>
+          <span class="color-dot" style="background:#fff; border:1px solid #ccc" onclick="changeSlide('sliderDargo', 0)"></span>
+          <span class="color-dot" style="background:#c0392b"   onclick="changeSlide('sliderDargo', 2)"></span>
+        </div>
+
+        <ul class="car-card__features">
+          <li>Выгода по госпрограмме</li>
+          <li>Максимальные выгоды по трейд-ин</li>
+          <li>КАСКО в подарок</li>
+          <li>Зимние шины в подарок</li>
+          <li>Доп.оборудование на 100 000р в подарок</li>
+        </ul>
+
+          <button class="btn-main" onclick="openPopup()">Узнать стоимость</button>
+          <button class="btn-dark" onclick="openPopup()">Подобрать комплектацию</button>
+          <button class="btn-outline" onclick="openPopup()">Рассчитать кредит</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== POPUP ========== -->
+  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+  <div class="popup" id="popup">
+    <button class="popup__close" onclick="closePopup()">✕</button>
+    <h3>Оставить заявку</h3>
+    <p>Мы перезвоним вам в ближайшее время</p>
+    <input type="tel" placeholder="+7 (___) ___-__-__" class="popup__input">
+    <button class="btn-popup popup__submit">Отправить</button>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <!-- O'z JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
